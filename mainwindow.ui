@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>649</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#C0F1DC ;
+color: #4B5C76;
+font-family: helvetica;
+font-size: 15px;
+font-weight: bold;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QTextEdit" name="bufferSize">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QTextEdit" name="numberOfDevices">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="BufferSizeLabel">
+      <property name="text">
+       <string>Buffer Size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="numberOfGeneratorsLabel">
+      <property name="text">
+       <string>Number Of Generators</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QTextEdit" name="alpha">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Beta</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Lambda</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Alpha</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTextEdit" name="numberOfGenerators">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="numberOfRequestsLabel">
+      <property name="text">
+       <string>Number Of Requests</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="numberOFDevicesLabel">
+      <property name="text">
+       <string>Number Of Devices</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QTextEdit" name="numberOfRequests">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="beginSimulation">
+      <property name="styleSheet">
+       <string notr="true"> color: #4B5C76;
+ font-size: 16px;
+ border: 0.2em solid var(--c);
+ border-radius: 0.5em;
+ width: 12em;
+ height: 3em;
+ text-transform: uppercase;
+ font-weight: bold;
+ font-family: helvetica;
+ letter-spacing: 0.1em;
+ text-align: center;
+ line-height: 3em;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ transition: 0.5s;
+ margin: 1em;</string>
+      </property>
+      <property name="text">
+       <string>Begin Simulation</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QTextEdit" name="beta">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QTextEdit" name="lambda">
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">outline: 0;
+background: transparent;
+border: 2px solid #4B5C76;
+border-radius: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="infoCheck">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>649</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
