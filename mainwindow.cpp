@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "secondwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -32,12 +31,16 @@ void MainWindow::on_beginSimulation_clicked()
 }
 
 bool MainWindow::isInfoValid(){
-    bool valid = false;
     for(auto parameter : parameters){
-        valid  = isNumeric(parameter->toPlainText().toStdString()) ? true : false;
+        if(!isNumeric(parameter->toPlainText().toStdString()))
+        {
+            return false;
+        }
     }
-    return valid;
+    return true;
 }
+
+
 
 bool MainWindow::isNumeric(const std::string& s)
 {
