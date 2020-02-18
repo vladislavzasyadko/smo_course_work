@@ -12,37 +12,41 @@ class Buffer
 public:
     Buffer(const unsigned int size);
     bool isFull();
+    bool isEmpty();
+
     void put(const Request& request);
-    void sortBuffer();
-    void sortByTime();
-    bool compareByTime(const Request& first, const Request& second);
-    void take();
+    int putToFull(const Request& request);
     Request give();
     Request lookInto();
+    void sortBuffer();
     void print();
     void createPackage();
     bool isPackageEmpty();
     void setMaxPriority();
+    std::vector<std::string> getState();
+    std::string getLastRejected();
+
     Request getLastToCome();
     void printStatus();
     struct Comparator{
-	// Compare 2 Player objects using name
-	bool operator ()(const Request & player1, const Request & player2)
+    // Compare 2 objects using time
+    bool operator ()(const Request & request1, const Request & request2)
 	{
-		if(player1.getTime() == player2.getTime())
-			return player1.getGenNumber() < player2.getGenNumber();
-		return player1.getTime() < player2.getTime();
- 
+        if(request1.getTime() == request2.getTime())
+            return request1.getGenNumber() < request2.getGenNumber();
+        return request1.getTime() < request2.getTime();
 	}
 	};
     ~Buffer();
     
 private:
-	std::list<Request> requests;
+    typedef std::vector<Request>::iterator requestIterator;
+    std::vector<Request> requests;
+    std::string lastRejected;
+
     unsigned int size;
-    unsigned int counter;
     unsigned int maxPriority;
     unsigned int packageSize;
-    std::list<Request> lastToCome;
+
 };
 #endif

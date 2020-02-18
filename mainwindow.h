@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include <QTextEdit>
+#include "data.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,8 +16,10 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    bool isInfoValid();
-    bool isNumeric(const std::string& s);
+    void getInput();
+    Data getData();
+    std::string toStr(QTextEdit *text);
+    bool isInputValid();
     ~MainWindow();
 
 private slots:
@@ -25,5 +28,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     std::vector<QTextEdit*> parameters;
+    Data data;
 };
 #endif // MAINWINDOW_H
